@@ -11,9 +11,9 @@ local Window = Rayfield:CreateWindow({
     }
 })
 
-local Tab = Window:CreateTab("Hubs", nil)
-
-local Hubs = {
+-- Mine Tab
+local MineTab = Window:CreateTab("Mine", nil)
+local MyHubs = {
     {Name = "Curtis Hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/curtis"},
     {Name = "flinky tool", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/flinky"},
     {Name = "holy visualz", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/holy%20visualz"},
@@ -21,8 +21,37 @@ local Hubs = {
     {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse%20hub"}
 }
 
-for _, hub in pairs(Hubs) do
-    Tab:CreateButton({
+for _, hub in pairs(MyHubs) do
+    MineTab:CreateButton({
+        Name = hub.Name,
+        Callback = function()
+            -- Check if Curtis Hub is being loaded
+            if hub.Name == "Curtis Hub" then
+                -- Check for "(FPS)" in the game name
+                if not string.find(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "%(FPS%)") then
+                    game.Players.LocalPlayer:Kick("Game Not Supported")
+                    return
+                end
+            end
+            
+            loadstring(game:HttpGet(hub.URL))()
+        end,
+    })
+end
+
+-- Not Mine Tab
+local NotMineTab = Window:CreateTab("Not mine", nil)
+local OtherHubs = {
+    {Name = "Nameless Admin", URL = "https://rawscripts.net/raw/Universal-Script-Nameless-Admin-23304"},
+    {Name = "Cobalt Remote Spy", URL = "https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"},
+    {Name = "Starlight Backdoor Scanner", URL = "https://rawscripts.net/raw/Universal-Script-Starlight-Scanner-213808"},
+    {Name = "Brainrot Police", URL = "https://raw.githubusercontent.com/IcantAffordSynapse/BrainrotPolice/refs/heads/main/src/init.lua"},
+    {Name = "Leave incase of Anti Leave", URL = "https://rawscripts.net/raw/Universal-Script-Leave-Button-for-Mobile-41066"},
+    {Name = "Fe Dropkick", URL = "https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"}
+}
+
+for _, hub in pairs(OtherHubs) do
+    NotMineTab:CreateButton({
         Name = hub.Name,
         Callback = function()
             loadstring(game:HttpGet(hub.URL))()
