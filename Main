@@ -1,0 +1,31 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Scribble’s best",
+    LoadingTitle = "Loading Hubs...",
+    LoadingSubtitle = "by Scribble",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "ScribbleHubConfig",
+        FileName = "Config"
+    }
+})
+
+local Tab = Window:CreateTab("Hubs", nil)
+
+local Hubs = {
+    {Name = "Curtis Hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/curtis"},
+    {Name = "flinky tool", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/flinky"},
+    {Name = "holy visualz", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/holy%20visualz"},
+    {Name = "spam random stuff", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/spam%20random%20stuff"},
+    {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse%20hub"}
+}
+
+for _, hub in pairs(Hubs) do
+    Tab:CreateButton({
+        Name = hub.Name,
+        Callback = function()
+            loadstring(game:HttpGet(hub.URL))()
+        end,
+    })
+end
