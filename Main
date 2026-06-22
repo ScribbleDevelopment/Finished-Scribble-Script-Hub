@@ -25,15 +25,6 @@ for _, hub in pairs(MyHubs) do
     MineTab:CreateButton({
         Name = hub.Name,
         Callback = function()
-            -- Check if Curtis Hub is being loaded
-            if hub.Name == "Curtis Hub" then
-                -- Check for "(FPS)" in the game name
-                if not string.find(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, "%(FPS%)") then
-                    game.Players.LocalPlayer:Kick("Game Not Supported")
-                    return
-                end
-            end
-            
             loadstring(game:HttpGet(hub.URL))()
         end,
     })
@@ -47,7 +38,10 @@ local OtherHubs = {
     {Name = "Starlight Backdoor Scanner", URL = "https://rawscripts.net/raw/Universal-Script-Starlight-Scanner-213808"},
     {Name = "Brainrot Police", URL = "https://raw.githubusercontent.com/IcantAffordSynapse/BrainrotPolice/refs/heads/main/src/init.lua"},
     {Name = "Leave incase of Anti Leave", URL = "https://rawscripts.net/raw/Universal-Script-Leave-Button-for-Mobile-41066"},
-    {Name = "Fe Dropkick", URL = "https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"}
+    {Name = "Fe Dropkick", URL = "https://rawscripts.net/raw/Universal-Script-Fe-DropKick-Script-165813"},
+    {Name = "Build anything op (creds to vaehz)", URL = "https://raw.githubusercontent.com/IcantAffordSynapse/youtubescripts/refs/heads/main/buildanything.lua"},
+    {Name = "Sell lemons op (creds to vaehz)", URL = "https://raw.githubusercontent.com/IcantAffordSynapse/youtubescripts/refs/heads/main/selllemons.lua"},
+    {Name = "Chicken farm op (creds to vaehz)", URL = "https://raw.githubusercontent.com/IcantAffordSynapse/youtubescripts/refs/heads/main/chickenfarm.lua"}
 }
 
 for _, hub in pairs(OtherHubs) do
