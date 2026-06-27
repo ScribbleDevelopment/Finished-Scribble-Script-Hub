@@ -14,6 +14,7 @@ local Window = Rayfield:CreateWindow({
 -- Mine Tab
 local MineTab = Window:CreateTab("Mine", nil)
 local MyHubs = {
+    {Name = "BRRD", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/BRRD"},
     {Name = "Curtis Hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/curtis"},
     {Name = "flinky tool", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/flinky"},
     {Name = "holy visualz", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/holy%20visualz"},
