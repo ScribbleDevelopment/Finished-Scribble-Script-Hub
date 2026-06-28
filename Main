@@ -1,3 +1,4 @@
+-- New file
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -14,6 +15,7 @@ local Window = Rayfield:CreateWindow({
 -- Mine Tab
 local MineTab = Window:CreateTab("Mine", nil)
 local MyHubs = {
+    {Name = "Be Michael Jackson", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/michael%20jackson"},
     {Name = "BRRD (Brain Rot Ripoff Destroyer)", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/BRRD"},
     {Name = "Curtis Hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/curtis"},
     {Name = "flinky tool", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/flinky"},
