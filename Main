@@ -20,14 +20,21 @@ local MyHubs = {
     {Name = "holy visualz", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/holy%20visualz"},
     {Name = "spam random stuff", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/spam%20random%20stuff"},
     {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse%20hub"},
-    {Name = "Super Super op FLY SCRIPT YESS SUPER SIGMA", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/op%20script%20hub"}
+    {Name = "Super Super op FLY SCRIPT YESS SUPER SIGMA", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/op script hub"}
 }
 
 for _, hub in pairs(MyHubs) do
     MineTab:CreateButton({
         Name = hub.Name,
         Callback = function()
-            loadstring(game:HttpGet(hub.URL))()
+            -- Automatically encodes spaces into %20 safely before requesting
+            local cleanURL = string.gsub(hub.URL, " ", "%%20")
+            local success, err = pcall(function()
+                loadstring(game:HttpGet(cleanURL))()
+            end)
+            if not success then
+                warn("Failed to load " .. hub.Name .. ". Error: " .. tostring(err))
+            end
         end,
     })
 end
@@ -50,7 +57,13 @@ for _, hub in pairs(OtherHubs) do
     NotMineTab:CreateButton({
         Name = hub.Name,
         Callback = function()
-            loadstring(game:HttpGet(hub.URL))()
+            local cleanURL = string.gsub(hub.URL, " ", "%%20")
+            local success, err = pcall(function()
+                loadstring(game:HttpGet(cleanURL))()
+            end)
+            if not success then
+                warn("Failed to load " .. hub.Name .. ". Error: " .. tostring(err))
+            end
         end,
     })
 end
