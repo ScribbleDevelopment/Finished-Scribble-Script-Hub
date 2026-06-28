@@ -19,7 +19,8 @@ local MyHubs = {
     {Name = "flinky tool", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/flinky"},
     {Name = "holy visualz", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/holy%20visualz"},
     {Name = "spam random stuff", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/spam%20random%20stuff"},
-    {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse%20hub"}
+    {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse%20hub"},
+		{Name = "Super Super op FLY SCRIPT YESS SUPER SIGMA", URL = "https://raw.githubusercontent/ScribbleDevelopment/Scribble-hub/refs/heads/main/op%20script%20hub"}
 }
 
 for _, hub in pairs(MyHubs) do
