@@ -38,7 +38,8 @@ local MyHubs = {
     {Name = "spam random stuff", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/spam random stuff"},
     {Name = "univ3rse hub", URL = "https://raw.githubusercontent.com/8d5mj856pf-ship-it/Scribble-hub/refs/heads/main/univ3rse hub"},
     {Name = "Super Super op FLY SCRIPT YESS SUPER SIGMA", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/op script hub"},
-    {Name = "beg for brainrotz", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/beg for brainrotz.lua"}
+    {Name = "beg for brainrotz", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/beg for brainrotz.lua"},
+    {Name = "MM2 Script", URL = "https://raw.githubusercontent.com/ScribbleDevelopment/Scribble-hub/refs/heads/main/mm2%20script"}
 }
 
 for _, hub in pairs(MyHubs) do
